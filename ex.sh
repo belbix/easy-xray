@@ -531,7 +531,7 @@ sudo ./ex.sh install${normal}"
     fi
     #
     check_command curl "required to download the xray installation script"
-    if bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
+    if bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --version v24.12.31
     then
         echo -e "${green}xray installed${normal}"
         dat_dir="/usr/local/share/xray/"
@@ -871,7 +871,7 @@ then
 
 elif [ $command = "upgrade" ]
 then
-    if bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
+    if bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --version v24.12.31
     then
         echo -e "${green}xray upgraded${normal}"
     else
